@@ -1,5 +1,14 @@
 {
   "name": "SoSeClient",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/cald/",
+      "proxyUrl": "http://10.171.11.100:8090/cald/"
+    }
+  ]
 }

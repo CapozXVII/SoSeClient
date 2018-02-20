@@ -1,0 +1,137 @@
+<!--
+  Generated template for the InsertRestaurantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle color="primary">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>InsertRestaurant</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>
+                Name
+            </ion-label>
+
+            <ion-input type="text" [(ngModel)]='name'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                City
+            </ion-label>
+
+            <ion-input type="text" [(ngModel)]='city'></ion-input>
+
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label floating>
+                Address
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='address'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                CAP
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='cap'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Phone Number
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='phone'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Style
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='style'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Menu
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='menu'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Cuisine
+            </ion-label>
+
+            <ion-input type="text" [(ngModel)]='cuisine'></ion-input>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Seats
+            </ion-label>
+
+            <ion-input type="number" [(ngModel)]='seats'></ion-input>
+
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label floating>
+                Name
+            </ion-label>
+
+            <ion-input type="text"  [(ngModel)]='name'></ion-input>
+
+        </ion-item>
+        <ion-item>
+            <h1 text-center>Discount percentage: {{discount}}</h1>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cinema</ion-label>
+            <ion-select [(ngModel)]="cinema">
+                <ion-option *ngFor="let x of cinemas" value={{x.id}}>{{x.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+
+
+            <ion-range min="10" max="30" [(ngModel)]="discount">
+                <ion-label range-left>10</ion-label>
+                <ion-label range-right>30</ion-label>
+            </ion-range>
+        </ion-item>
+
+        <button ion-button full (click)="insertRestaurant()">Insert</button>
+
+    </ion-list>
+
+</ion-content>
